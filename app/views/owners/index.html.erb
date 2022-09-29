@@ -1,0 +1,7 @@
+<h2>Listado de dueños inscritos.</h2>
+<% @owner.each do |owner| %>
+  <%= link_to owner_path(owner.id) do%>
+    <h3> <%= owner.nombre%> </h3>
+  <% end %>
+<% end %>
+<%= link_to 'Inscribir nueva persona', new_owner_path %>

@@ -1,0 +1,7 @@
+<h2>Listado de mascotas inscritas.</h2>
+<% @pets.each do |pet| %>
+  <%= link_to pet_path(pet.id) do%>
+    <h3> <%= pet.nombre%> </h3>
+  <% end %>
+<% end %>
+<%= link_to 'Inscribir nueva mascota', new_pet_path %>

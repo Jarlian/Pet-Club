@@ -1,0 +1,13 @@
+<h1><%= @owner.nombre%></h1>
+<p>
+  <b>Nombre:</b> <%= @owner.nombre%><br>
+  <b>Cédula:</b> <%= @owner.cedula%><br>
+  <b>Teléfono:</b> <%= @owner.telefono%><br>
+  <b>Correo:</b> <%= @owner.correo%><br>
+</p>
+
+<%= link_to 'Editar información', edit_owner_path(@owner) %>
+<%= link_to 'Eliminar información de la mascota', owner_path(@owner), data: {
+  turbo_method: :delete,
+  turbo_confirm: "¿Seguro que deseas eliminar la información de #{@owner.nombre}.?"} %>
+<!-- ¿Cómo pongo el nombre acá? -->

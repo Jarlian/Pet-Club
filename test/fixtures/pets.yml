@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  especie: MyString
+  comida: MyString
+  enfermedades: MyText
+  alergias: MyText
+  cuidados: MyText
+
+two:
+  nombre: MyString
+  especie: MyString
+  comida: MyString
+  enfermedades: MyText
+  alergias: MyText
+  cuidados: MyText

@@ -1,0 +1,43 @@
+<h2>Inscribir nueva mascota.</h2>
+<%= form_with model: @pet do |form| %>
+  <div>
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :especie %>
+    <%= form.text_field :especie %>
+  </div>
+
+  <div>
+    <%= form.label :raza %>
+    <%= form.text_field :raza %>
+  </div>
+
+  <div>
+    <%= form.label :comida %>
+    <%= form.text_field :comida %>
+  </div>
+
+  <div>
+    <%= form.label :enfermedades %>
+    <%= form.text_area :enfermedades %>
+  </div>
+
+  <div>
+    <%= form.label :alergias %>
+    <%= form.text_area :alergias %>
+  </div>
+
+  <div>
+    <%= form.label :cuidados%>
+    <%= form.text_area :cuidados %>
+  </div>
+
+  <div>
+    <label>Dueño: </label>
+    <%= form.collection_select :owner_id, Owner.all.order(nombre: :asc), :id, :nombre%>
+  </div>
+  <%= form.submit "Inscribir mascota" %>
+<% end %>

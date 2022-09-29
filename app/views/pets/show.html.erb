@@ -1,0 +1,14 @@
+<h1><%= @pet.nombre%></h1>
+<p>
+  <b>Especie:</b> <%= @pet.especie%><br>
+  <b>Tipo de comida:</b> <%= @pet.comida%><br>
+  <b>Enfermedades:</b> <%= @pet.enfermedades%><br>
+  <b>Alergias:</b> <%= @pet.alergias%><br>
+  <b>Cudiados especiales:</b> <%= @pet.cuidados%><br>
+</p>
+
+<%= link_to 'Editar información', edit_pet_path(@pet) %>
+<%= link_to 'Eliminar información de la mascota', pet_path(@pet), data: {
+  turbo_method: :delete,
+  turbo_confirm: "¿Seguro que deseas eliminar la información de #{@pet.nombre}.?"} %>
+<!-- ¿Cómo pongo el nombre acá? -->
