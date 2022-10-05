@@ -33,7 +33,11 @@ class OwnersController < ApplicationController
 
   def destroy
     @owner = Owner.find(params[:id])
+    @pet = Pet.find(@owner.id)
+    puts @pet
+    @pet.destroy
     @owner.destroy
+
     redirect_to owners_path, status: :see_other #¿esto se hace siempre para la petición DELETE?
   end
   private

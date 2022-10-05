@@ -7,7 +7,7 @@
 </p>
 
 <%= link_to 'Editar información', edit_owner_path(@owner) %>
-<%= link_to 'Eliminar información de la mascota', owner_path(@owner), data: {
+<%= link_to 'Eliminar información de la persona', owner_path(@owner), data: {
   turbo_method: :delete,
   turbo_confirm: "¿Seguro que deseas eliminar la información de #{@owner.nombre}.?"} %>
 <!-- ¿Cómo pongo el nombre acá? -->
