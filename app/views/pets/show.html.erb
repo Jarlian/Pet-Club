@@ -5,6 +5,8 @@
   <b>Enfermedades:</b> <%= @pet.enfermedades%><br>
   <b>Alergias:</b> <%= @pet.alergias%><br>
   <b>Cuidados especiales:</b> <%= @pet.cuidados%><br>
+  <b>Dueño:</b> <%=  @owner.nombre %><br>
+
 </p>
 
 <%= link_to 'Editar información', edit_pet_path(@pet) %>

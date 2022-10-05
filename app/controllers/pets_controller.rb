@@ -4,6 +4,7 @@ class PetsController < ApplicationController
   end
   def show
     @pet = Pet.find(params[:id]) #Busco lo que se encuentra en el id clickeado
+    @owner = Owner.find(@pet.owner_id)
   end
   def new
     @pet = Pet.new #crea una mascota con atributos vacíos que se llena con el formulario

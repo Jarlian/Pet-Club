@@ -34,5 +34,10 @@
     <%= form.label :cuidados%>
     <%= form.text_area :cuidados %>
   </div>
+  <div>
+    <label>Dueño: </label>
+    <%= form.collection_select :owner_id, Owner.all.order(nombre: :asc), :id, :nombre%>
+  </div>
+
   <%= form.submit "Actualizar datos" %>
 <% end %>
