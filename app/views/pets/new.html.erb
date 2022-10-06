@@ -1,4 +1,5 @@
 <h2>Inscribir nueva mascota.</h2>
+<%= link_to 'Atrás', pet_path(@pet) %>
 <%= form_with model: @pet do |form| %>
   <div>
     <%= form.label :nombre %>
