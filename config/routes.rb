@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'owners#index'
   delete '/pets/:id', to: 'pets#destroy' #
   patch 'pets/:id', to: 'pets#update'   # Estos tres nombres se usan por convención
   post '/pets', to: 'pets#create'       #
