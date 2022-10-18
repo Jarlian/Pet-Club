@@ -1,10 +1,12 @@
 <h1><%= @owner.nombre%></h1>
 <p>
-  <b>Nombre:</b> <%= @owner.nombre%><br>
-  <b>Cédula:</b> <%= @owner.cedula%><br>
-  <b>Teléfono:</b> <%= @owner.telefono%><br>
-  <b>Correo:</b> <%= @owner.correo%><br>
+  <b>Nombre:</b> <%= @owner.nombre %><br>
+  <b>Cédula:</b> <%= @owner.cedula %><br>
+  <b>Teléfono:</b> <%= @owner.telefono %><br>
+  <b>Correo:</b> <%= @owner.correo %><br>
   <b>Mascotas:</b> <%= @pet %><br>
+  <!-- TODO: Iterar las mascotas y poner nombre, raza y edad -->
+  <!-- Usar la relacion @owner.pets -->
 </p>
 
 <%= link_to 'Editar información', edit_owner_path(@owner) %>

@@ -1,12 +1,12 @@
 <%= link_to 'Atrás', pets_path %>
-<h1><%= @pet.nombre%></h1>
+<h1><%= @pet.nombre %></h1>
 <p>
-  <b>Especie:</b> <%= @pet.especie%><br>
-  <b>Tipo de comida:</b> <%= @pet.comida%><br>
-  <b>Enfermedades:</b> <%= @pet.enfermedades%><br>
-  <b>Alergias:</b> <%= @pet.alergias%><br>
-  <b>Cuidados especiales:</b> <%= @pet.cuidados%><br>
-  <b>Dueño:</b> <%=  @owner.nombre %><br>
+  <b>Especie:</b> <%= @pet.especie %><br>
+  <b>Tipo de comida:</b> <%= @pet.comida %><br>
+  <b>Enfermedades:</b> <%= @pet.enfermedades %><br>
+  <b>Alergias:</b> <%= @pet.alergias %><br>
+  <b>Cuidados especiales:</b> <%= @pet.cuidados %><br>
+  <b>Dueño:</b> <%= @pet.owner.nombre %><br>
 
 </p>
 
