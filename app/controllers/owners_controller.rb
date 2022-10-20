@@ -1,17 +1,21 @@
 class OwnersController < ApplicationController
   def index
-    @owner = Owner.all #Consulto todas las mascotas, es un array de mascotas
+    @owner = Owner.all
   end
+
   def show
-    @owner = Owner.find(params[:id]) #Busco lo que se encuentra en el id clickeado
-    @pet = Pet.where(owner_id: @owner.id).pluck(:nombre)
+    @owner = Owner.find(params[:id])
+    # En la vista usar @owner.pets
+    # @pet = Pet.where(owner_id: @owner.id).pluck(:nombre)
   end
+
   def new
-    @owner = Owner.new #crea una mascota con atributos vacíos que se llena con el formulario
+    @owner = Owner.new
   end
+
   def create
     @owner = Owner.new(owner_params)
-    pp @owner #muestro en consola
+
     if @owner.save
       redirect_to owners_path
     else
@@ -25,6 +29,7 @@ class OwnersController < ApplicationController
 
   def update
     @owner = Owner.find(params[:id])
+
     if @owner.update(owner_params)
       redirect_to owners_path
     else
@@ -34,13 +39,11 @@ class OwnersController < ApplicationController
 
   def destroy
     @owner = Owner.find(params[:id])
-    @pet = Pet.find(@owner.id)
-    puts @pet
-    @pet.destroy
-    @owner.destroy
+    @owner.destroy # Como hacer para que al destruir el owner se destruyan todos sus pets asociados?
 
     redirect_to owners_path, status: :see_other #¿esto se hace siempre para la petición DELETE?
   end
+
   private
 
   def owner_params

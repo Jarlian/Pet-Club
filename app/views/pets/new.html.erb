@@ -1,3 +1,5 @@
+<!-- TODO: Mostrar los errores del formulario cuando hayan errores -->
+
 <h2>Inscribir nueva mascota.</h2>
 <%= link_to 'Atrás', pet_path(@pet) %>
 <%= form_with model: @pet do |form| %>
@@ -38,7 +40,7 @@
 
   <div>
     <label>Dueño: </label>
-    <%= form.collection_select :owner_id, Owner.all.order(nombre: :asc), :id, :nombre%>
+    <%= form.collection_select :owner_id, Owner.all.order(nombre: :asc), :id, :nombre%> <!-- TODO: Creo que se puede sin el .all -->
   </div>
   <%= form.submit "Inscribir mascota" %>
 <% end %>

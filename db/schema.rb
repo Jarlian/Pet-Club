@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_29_020647) do
   enable_extension "plpgsql"
 
   create_table "owners", force: :cascade do |t|
+    # TODO: Hacer algunos de estos campos requeridos, como el nombre y la cedula
     t.string "nombre"
     t.integer "cedula"
     t.integer "telefono"
@@ -24,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_29_020647) do
   end
 
   create_table "pets", force: :cascade do |t|
+    # TODO: Hacer algunos de estos campos requeridos, como el nombre y la especie
     t.string "nombre"
     t.string "especie"
     t.string "comida"

@@ -2,16 +2,17 @@ class PetsController < ApplicationController
   def index
     @pets = Pet.all #Consulto todas las mascotas, es un array de mascotas
   end
+
   def show
     @pet = Pet.find(params[:id]) #Busco lo que se encuentra en el id clickeado
-    @owner = Owner.find(@pet.owner_id)
   end
+
   def new
     @pet = Pet.new #crea una mascota con atributos vacíos que se llena con el formulario
   end
+
   def create
     @pet = Pet.new(pet_params)
-    pp @pet #muestro en consola
     if @pet.save
       redirect_to pets_path
     else
